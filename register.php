@@ -32,12 +32,7 @@ if(isset($_POST['submit']))
 	else
 	{   
         echo "complete in all the fields ";
-		header("Location:maind.php");
-		
+		header("Location:main.php");
 	}
-	
-	
-	
-	
 	 }	
   ?>
