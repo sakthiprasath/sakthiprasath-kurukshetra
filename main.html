@@ -19,30 +19,6 @@ background-color:#f1f1f1;
 box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 </style>
-<script>
-function validateForm() {
-    var x = document.forms["myform"]["user"].value;
-    var y = document.forms["myform"]["pass"].value;
-    var  z = document.forms["myform"]["repass"].value;
-    
-    if (x == null || x == "") 
-	{
-      alert("Name must be filled out");
-      return false;
-    }
-    if(y == z)
-	{ alert("same passwords");
-	  return true;
-	 }
-	 if(!y.equals(z))
-	  {
-	   alert("password are not same");
-	    return false;   
-	   }
-	
-	
-}
-</script>
 </head>
 <body>
 <div id="div1">
