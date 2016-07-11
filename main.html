@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background-color:lightgery;
+}
+#div1{
+
+width:400px;
+padding:50px;
+text-align:left;
+margin:auto;
+margin-top:50px;
+color:black;
+font-family:verdana;
+background-color:#f1f1f1;
+
+box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+</style>
+<script>
+function validateForm() {
+    var x = document.forms["myform"]["user"].value;
+    var y = document.forms["myform"]["pass"].value;
+    var  z = document.forms["myform"]["repass"].value;
+    
+    if (x == null || x == "") 
+	{
+      alert("Name must be filled out");
+      return false;
+    }
+    if(y == z)
+	{ alert("same passwords");
+	  return true;
+	 }
+	 if(!y.equals(z))
+	  {
+	   alert("password are not same");
+	    return false;   
+	   }
+	
+	
+}
+</script>
+</head>
+<body>
+<div id="div1">
+<form id="myform" name="myform" action="reg.php"
+onsubmit="return validateForm()" method="post">
+
+<label>User_Name:</label>
+ <input name="user" type="text" style="width:100%;padding:10px;">
+ </br></br>
+
+<label>Password:</label><br \>
+ <input name="pass" type="password" style="width:100%;padding:10px;">
+ </br></br>
+ 
+<label> Re Password :</label><br \>
+ <input name="repass" type="password" style="width:100%;padding:10px;">
+ </br></br>
+ 
+<label>College :</label><br \>
+     <input name="colg" type="text" style="width:100%;padding:10px;">
+	 </br></br>
+	 
+<label>Department  :</label><br \>
+   <input name="dept" type="text" style="width:100%;padding:10px;">
+   </br></br>
+   
+<label>Year :</label><br \>
+<input name="year" type="number" style="width:100%;padding:10px;" min="1" max="5">
+</br></br>
+<input  type="submit"  name="submit" value="submit" style="width:100%;padding:10px; background-color:#4CaF50;color:white;">
+</form>
+</div>
+</body>
+</html>
+
